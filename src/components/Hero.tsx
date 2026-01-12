@@ -73,8 +73,12 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative w-64 h-64 sm:w-96 sm:h-96 rounded-[2.5rem] bg-gradient-to-br from-orange-400 to-orange-600 p-1.5 shadow-2xl hover:scale-[1.02] transition-transform duration-500">
-              <div className="relative w-full h-full rounded-[2.1rem] overflow-hidden bg-background">
+            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+              {/* Soft Gradient Ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent to-primary opacity-20 blur-2xl animate-pulse"></div>
+
+              {/* Main Image Container */}
+              <div className="relative w-full h-full rounded-full border-[6px] border-background shadow-2xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 ring-4 ring-primary/20">
                 <Image
                   src="/IMG_20260103_134927.png"
                   alt="Ruwani Ranthika"
