@@ -81,7 +81,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Theta Lounge - Floating Therapy Business",
     description: "Freelance Full-Stack Project | MERN Stack. Developed a full-stack web application for a floating therapy wellness center to manage client appointments and operational workflows.",
-    tech: ["MERN Stack", "MongoDB", "Express.js", "React", "Node.js", "Redux", "Firebase"],
+    tech: [],
     features: [
       "Built a session-based tank management system, enabling tank-wise scheduling and availability tracking.",
       "Implemented time slot calculation logic for accurate appointment booking and conflict prevention.",
