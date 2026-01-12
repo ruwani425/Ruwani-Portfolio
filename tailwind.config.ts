@@ -9,12 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        'xxs': '320px',
         'xs': '375px',
-        // 'sm' is 640px
-        // 'md' is 768px
-        // 'lg' is 1024px
-        // 'xl' is 1280px
-        '2xl': '1440px', // Explicitly targeting the 1440px request as 2xl or just ensuring layout works there
+        'sm-plus': '425px', // Mobile Large
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1400px',
+        '3xl': '1440px',
       },
     },
   },

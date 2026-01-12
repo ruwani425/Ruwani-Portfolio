@@ -7,7 +7,7 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-20 px-4 sm:px-6 relative overflow-hidden"
+      className="py-20 px-4 xxs:px-3 sm:px-6 relative overflow-hidden"
     >
       <div className="max-w-4xl mx-auto relative">
         <MotionWrapper>

@@ -5,6 +5,7 @@ export interface Project {
   github: string;
   live: string;
   features?: string[];
+  githubLinks?: { label: string; url: string }[];
 }
 
 export const EDUCATION = [
@@ -47,6 +48,25 @@ export const ADDITIONAL_EXPERIENCE = [
 ]
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Blood Bank Management System",
+    description: "A comprehensive blood bank management system developed in two iterations: one using Layered Architecture and another using MVC Pattern. Features donor/patient management, inventory tracking, and dynamic reporting.",
+    tech: ["Java", "MySQL", "JavaFX", "JDBC", "MVC Pattern", "Layered Architecture"],
+    features: [
+      "Two architectural implementations: MVC and Layered Architecture.",
+      "Complete Donor and Patient management life-cycle.",
+      "blood stock monitoring and inventory tracking.",
+      "Hospital and Campaign management modules.",
+      "User authentication and role-based authorization.",
+      "Dynamic reporting and email notifications."
+    ],
+    github: "#", // Placeholder, will use githubLinks
+    githubLinks: [
+      { label: "MVC Repo", url: "https://github.com/ruwani425/Blood-Bank-Management-System.git" },
+      { label: "Layered Repo", url: "https://github.com/ruwani425/Blood-Bank-layerd-architecture.git" }
+    ],
+    live: "#",
+  },
   {
     title: "Adlync - Smart Classified Ads & Marketplace",
     description: "A full-stack web application built with Spring Boot (Java 21) and MySQL for managing classified ads. Features real-time chat, image uploads, and secure JWT authentication. (2nd Semester Final Project)",
@@ -93,21 +113,7 @@ export const PROJECTS: Project[] = [
     github: "#",
     live: "https://thetalounge.com",
   },
-  {
-    title: "Blood Bank Management System",
-    description: "A standalone desktop application for managing blood bank operations, including donors, inventory, and campaigns. Features email notifications and dynamic reporting. (1st Semester Final Project)",
-    tech: ["Java", "JavaFX", "MySQL", "Jasper Reports", "CSS", "JDBC"],
-    features: [
-      "Layered Architecture with MVC pattern.",
-      "Comprehensive management of Donors, Hospitals, Campaigns, and Employees.",
-      "Real-time Inventory and Blood Stock management.",
-      "Blood Request processing and Health Checkup tracking.",
-      "Dynamic Report generation using Jasper Reports.",
-      "Email notification integration."
-    ],
-    github: "https://github.com",
-    live: "#"
-  },
+
 ]
 
 export const SKILLS = {

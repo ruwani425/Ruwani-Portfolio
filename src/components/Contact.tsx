@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Linkedin, Github, Loader2 } from "lucide-react";
+import { SiMedium } from "react-icons/si";
 import MotionWrapper from "./MotionWrapper";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -43,7 +44,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-20 px-4 sm:px-6">
+    <section
+      id="contact"
+      className="py-16 md:py-20 px-4 xxs:px-3 sm:px-6 overflow-hidden"
+    >
       <div className="max-w-3xl mx-auto">
         <MotionWrapper>
           <div className="text-center mb-12">
@@ -151,6 +155,16 @@ export default function Contact() {
               aria-label="Email"
             >
               <Mail size={24} />
+            </a>
+
+            <a
+              href="https://medium.com/@ruwanielv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-muted-foreground hover:text-accent transition-all hover:scale-110"
+              aria-label="Medium"
+            >
+              <SiMedium size={24} />
             </a>
           </div>
         </MotionWrapper>

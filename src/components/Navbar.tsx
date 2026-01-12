@@ -33,8 +33,8 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-8">
+            <div className="flex gap-4 lg:gap-8">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -87,12 +87,12 @@ export default function Navbar() {
 
       {/* Mobile Navigation Overlay */}
       <div
-        className={`fixed inset-0 bg-background/95 backdrop-blur-xl z-40 md:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-background/95 backdrop-blur-xl z-40 md:hidden transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        style={{ top: "0", height: "100vh" }}
+        style={{ top: "0", height: "100dvh" }}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-8">
+        <div className="flex flex-col items-center justify-center min-h-full gap-8 py-20">
           {navLinks.map((link) => (
             <a
               key={link.href}

@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-24 pb-20 px-4 sm:px-6 relative overflow-hidden">
+    <section className="min-h-screen flex items-center pt-24 pb-20 px-4 xxs:px-3 sm:px-6 relative overflow-hidden w-full">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
 
@@ -52,7 +52,7 @@ export default function Hero() {
           </MotionWrapper>
 
           <MotionWrapper direction="up" delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl xs:text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
               Hi, I'm <br />
               <span className="text-gradient-primary">Ruwani Ranthika</span>
             </h1>
@@ -111,7 +111,8 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+            {/* Responsive image size: small on mobile, medium on tablet, large on desktop */}
+            <div className="relative w-64 h-64 xxs:w-72 xxs:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
               {/* Soft Gradient Ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent to-primary opacity-20 blur-2xl animate-pulse"></div>
 

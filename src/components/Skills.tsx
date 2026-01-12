@@ -89,7 +89,10 @@ const skillIcons: Record<string, React.ReactNode> = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6">
+    <section
+      id="skills"
+      className="py-20 px-4 xxs:px-3 sm:px-6 overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto">
         <MotionWrapper>
           <h2 className="text-3xl font-bold mb-12 text-foreground text-center">

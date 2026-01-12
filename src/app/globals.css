@@ -115,10 +115,14 @@
     font-size: clamp(16px, 1vw + 14px, 18px);
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    overflow-x: hidden; /* Critical for mobile */
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden; /* prevent horizontal scroll */
+    @apply bg-background text-foreground;
+    overflow-x: hidden; /* Double safety */
+    position: relative;
+    width: 100%;
   }
   
   /* Instagram-inspired dark mode gradient - Smoother */

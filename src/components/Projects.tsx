@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-4 sm:px-6 border-t border-border"
+      className="py-20 px-4 xxs:px-3 sm:px-6 border-t border-border overflow-hidden"
     >
       <div className="max-w-5xl mx-auto">
         <MotionWrapper>
@@ -47,16 +47,31 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4 pt-4 border-t border-white/5 mt-auto">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
-                  >
-                    <Github size={18} />
-                    Code
-                  </a>
+                <div className="flex gap-4 pt-4 border-t border-white/5 mt-auto flex-wrap">
+                  {project.githubLinks ? (
+                    project.githubLinks.map((link, i) => (
+                      <a
+                        key={i}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        <Github size={18} />
+                        {link.label}
+                      </a>
+                    ))
+                  ) : (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      <Github size={18} />
+                      Code
+                    </a>
+                  )}
                   <a
                     href={project.live}
                     target="_blank"
