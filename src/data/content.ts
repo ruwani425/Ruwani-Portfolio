@@ -121,7 +121,7 @@ export const EXPERTISE = [
   {
     title: "Rapid Application Development",
     description: " delivering high-quality prototypes and MVPs at speed using modern frameworks like Next.js and Tailwind CSS to accelerate time-to-market.",
-    icon: "Zap", // Changing icon to Zap for speed
+    icon: "Zap",
   },
   {
     title: "Enterprise Web Applications",

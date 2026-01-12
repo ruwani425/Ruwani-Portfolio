@@ -34,7 +34,7 @@ export default function Hero() {
         <svg
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
-          className="w-full h-full fill-accent/10 dark:fill-primary/5"
+          className="w-full h-full fill-accent/10 dark:fill-primary/10"
         >
           <path d="M100 0V100H20C-20 70 50 50 20 0H100Z" />
         </svg>
@@ -92,7 +92,7 @@ export default function Hero() {
                 />
               </a>
               <a
-                href="/CV - Ruwani Ranthika.pdf"
+                href="/Ruwani_Ranthika_CV.pdf"
                 download="Ruwani_Ranthika_CV.pdf"
                 className="px-8 py-3.5 border border-border bg-background/50 text-foreground rounded-full font-semibold hover:bg-accent/10 transition backdrop-blur-sm flex items-center justify-center gap-2"
               >

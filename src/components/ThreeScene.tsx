@@ -17,8 +17,7 @@ function AnimatedShape() {
     }
   });
 
-  // Determine color based on theme (though "Instagram" theme implies vibrant colors in both)
-  // We'll use the vibrant primary/accent colors
+
   const color = theme === "dark" ? "#833AB4" : "#e1306c";
 
   return (

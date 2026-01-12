@@ -37,41 +37,42 @@
 }
 
 .dark {
-  /* Simple, Clean Dark Mode */
-  --background: oklch(0.12 0.02 260);     /* Clean Dark Blue-Gray */
-  --foreground: oklch(0.98 0.00 0);       /* White */
-  --card: oklch(0.15 0.03 260);           /* Slightly lighter card */
-  --card-foreground: oklch(0.98 0.00 0);
-  --popover: oklch(0.15 0.03 260);
-  --popover-foreground: oklch(0.98 0.00 0);
-  --primary: oklch(0.65 0.18 260);        /* Vibrant Blue */
-  --primary-foreground: oklch(0.98 0.00 0);
-  --secondary: oklch(0.20 0.04 260);
-  --secondary-foreground: oklch(0.98 0.00 0);
-  --muted: oklch(0.20 0.04 260);
-  --muted-foreground: oklch(0.70 0.05 260);
-  --accent: oklch(0.60 0.18 260);         /* Deeper Blue Accent */
-  --accent-foreground: oklch(0.98 0.00 0);
-  --accent-light: oklch(0.25 0.05 260);
+  /* Instagram Theme - Dark Mode (Refined) */
+  --background: oklch(0.08 0.02 280);     /* Deep Black/Purple Base */
+  --foreground: oklch(0.98 0.01 300);     /* Crisp White */
+  --card: oklch(0.12 0.04 280);
+  --card-foreground: oklch(0.98 0.01 300);
+  --popover: oklch(0.12 0.04 280);
+  --popover-foreground: oklch(0.98 0.01 300);
+  --primary: oklch(0.65 0.25 320);        /* Vibrant Pink/Purple */
+  --primary-foreground: oklch(0.98 0.01 300);
+  --secondary: oklch(0.20 0.06 320);
+  --secondary-foreground: oklch(0.98 0.01 300);
+  --muted: oklch(0.20 0.06 280);
+  --muted-foreground: oklch(0.70 0.04 280);
+  /* Shift accent away from Muddy Orange to a Bright Peach/Gold/Pink to avoid brown tones */
+  --accent: oklch(0.70 0.20 20);          /* Bright Warm Pink/Red-Orange */
+  --accent-foreground: oklch(0.98 0.01 300);
+  --accent-light: oklch(0.25 0.08 340);
   --destructive: oklch(0.60 0.25 27);
-  --destructive-foreground: oklch(0.98 0.00 0);
-  --border: oklch(0.20 0.04 260);
-  --input: oklch(0.20 0.04 260);
-  --ring: oklch(0.65 0.18 260);
+  --destructive-foreground: oklch(0.98 0.01 300);
+  --border: oklch(0.25 0.06 280);
+  --input: oklch(0.25 0.06 280);
+  --ring: oklch(0.65 0.25 320);
   
-  --sidebar: oklch(0.15 0.03 260);
-  --sidebar-foreground: oklch(0.98 0.00 0);
-  --sidebar-primary: oklch(0.65 0.18 260);
-  --sidebar-primary-foreground: oklch(0.98 0.00 0);
-  --sidebar-accent: oklch(0.20 0.04 260);
-  --sidebar-accent-foreground: oklch(0.98 0.00 0);
-  --sidebar-border: oklch(0.20 0.04 260);
-  --sidebar-ring: oklch(0.65 0.18 260);
+  --sidebar: oklch(0.12 0.04 280);
+  --sidebar-foreground: oklch(0.98 0.01 300);
+  --sidebar-primary: oklch(0.65 0.25 320);
+  --sidebar-primary-foreground: oklch(0.98 0.01 300);
+  --sidebar-accent: oklch(0.20 0.06 280);
+  --sidebar-accent-foreground: oklch(0.98 0.01 300);
+  --sidebar-border: oklch(0.25 0.06 280);
+  --sidebar-ring: oklch(0.65 0.25 320);
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Geist Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -120,10 +121,11 @@
     @apply bg-background text-foreground overflow-x-hidden; /* prevent horizontal scroll */
   }
   
-  /* Minimal Dark Background - Subtle Blue Gradient */
+  /* Instagram-inspired dark mode gradient - Smoother */
   .dark body {
     background-image: 
-      radial-gradient(circle at 50% 0%, oklch(0.20 0.05 260 / 0.2), transparent 60%);
+      radial-gradient(circle at 10% 20%, oklch(0.20 0.15 320 / 0.15), transparent 50%),  /* Smooth Purple glow */
+      radial-gradient(circle at 90% 80%, oklch(0.20 0.15 340 / 0.15), transparent 50%);   /* Smooth Pink glow */
     background-attachment: fixed;
   }
 }
