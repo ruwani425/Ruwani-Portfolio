@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
       "Developed a client appointment booking system with real-time availability.",
       "Created an admin dashboard to manage tanks, operational days, appointments, and therapy packages.",
       "Implemented role-based access control for admin and client users.",
-      "Integrated Firebase Google Authentication for secure user login."
+      "Integrated Google Authentication for secure user login."
     ],
     github: "#",
     live: "https://thetalounge.com",
