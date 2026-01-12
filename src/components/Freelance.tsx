@@ -22,7 +22,7 @@ export default function Freelance() {
           <div className="space-y-6">
             {FREELANCE_WORK.map((work, idx) => (
               <MotionWrapper key={idx} delay={0.2 + idx * 0.1}>
-                <div className="glass-card rounded-xl p-6 hover:bg-card/80 transition-all duration-300 hover:scale-[1.01]">
+                <div className="glass-card rounded-xl p-5 sm:p-6 hover:bg-card/80 transition-all duration-300 hover:scale-[1.01]">
                   <div className="flex justify-between items-start gap-4 mb-3">
                     <h3 className="font-bold text-lg text-foreground">
                       {work.title}

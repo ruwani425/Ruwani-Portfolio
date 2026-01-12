@@ -20,7 +20,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-6">
           {PROJECTS.map((project, idx) => (
             <MotionWrapper key={idx} delay={idx * 0.1} className="h-full">
-              <div className="glass-card rounded-xl p-8 hover:bg-card/80 transition-all duration-300 hover:scale-[1.02] group h-full flex flex-col">
+              <div className="glass-card rounded-xl p-6 sm:p-8 hover:bg-card/80 transition-all duration-300 hover:scale-[1.02] group h-full flex flex-col">
                 <h3 className="font-bold text-xl text-foreground mb-3 group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>

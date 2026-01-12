@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6">
+    <section id="contact" className="py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <MotionWrapper>
           <div className="text-center mb-12">
@@ -56,7 +56,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="glass-card p-8 rounded-3xl mb-12">
+          <div className="glass-card p-6 sm:p-8 rounded-3xl mb-12">
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">

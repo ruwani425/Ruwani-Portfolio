@@ -7,16 +7,16 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-20 px-4 sm:px-6 relative overflow-hidden">
+    <section className="min-h-screen flex items-center pt-24 pb-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
 
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
         {/* Left Col: Text Content */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left pt-8 md:pt-0">
           <MotionWrapper direction="up" delay={0.1}>
             <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 backdrop-blur-sm">
-              <span className="text-accent font-semibold text-sm tracking-wide">
+              <span className="text-accent font-semibold text-xs sm:text-sm tracking-wide">
                 Available for Freelance
               </span>
             </div>
@@ -30,13 +30,13 @@ export default function Hero() {
           </MotionWrapper>
 
           <MotionWrapper direction="up" delay={0.3}>
-            <p className="text-xl text-muted-foreground mb-4 max-w-lg leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-lg leading-relaxed">
               <span className="text-foreground font-semibold">
                 Software Engineering Student
               </span>{" "}
               | Part-Time Freelancer
             </p>
-            <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
               I build responsive web applications and deliver custom software
               solutions. Specializing in modern technologies and best practices.
             </p>
@@ -73,7 +73,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-[2.5rem] bg-gradient-to-br from-orange-400 to-orange-600 p-1.5 shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+            <div className="relative w-64 h-64 sm:w-96 sm:h-96 rounded-[2.5rem] bg-gradient-to-br from-orange-400 to-orange-600 p-1.5 shadow-2xl hover:scale-[1.02] transition-transform duration-500">
               <div className="relative w-full h-full rounded-[2.1rem] overflow-hidden bg-background">
                 <Image
                   src="/IMG_20260103_134927.png"

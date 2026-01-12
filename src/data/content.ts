@@ -115,3 +115,26 @@ export const SKILLS = {
   backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Hibernate", "JPA", "Python", "RESTful APIs"],
   tools: ["Git", "GitHub", "IntelliJ IDEA", "VS Code", "Postman", "Docker", "Linux", "JasperSoft Studio"],
 }
+
+export const EXPERTISE = [
+  {
+    title: "Rapid Application Development",
+    description: " delivering high-quality prototypes and MVPs at speed using modern frameworks like Next.js and Tailwind CSS to accelerate time-to-market.",
+    icon: "Zap", // Changing icon to Zap for speed
+  },
+  {
+    title: "Enterprise Web Applications",
+    description: "Architecting scalable, secure, and robust enterprise-grade web solutions using Spring Boot and Microservices for complex business needs.",
+    icon: "Building",
+  },
+  {
+    title: "Mobile App Development",
+    description: "Designing and developing intuitive cross-platform mobile applications for Android and iOS using React Native, focused on performance.",
+    icon: "Smartphone",
+  },
+  {
+    title: "Desktop App Development",
+    description: "Building efficient, standalone desktop software using JavaFX and Electron, ensuring seamless offline functionality and rich user experiences.",
+    icon: "Monitor",
+  },
+];

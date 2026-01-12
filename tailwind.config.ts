@@ -7,7 +7,16 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '375px',
+        // 'sm' is 640px
+        // 'md' is 768px
+        // 'lg' is 1024px
+        // 'xl' is 1280px
+        '2xl': '1440px', // Explicitly targeting the 1440px request as 2xl or just ensuring layout works there
+      },
+    },
   },
   plugins: [],
 };

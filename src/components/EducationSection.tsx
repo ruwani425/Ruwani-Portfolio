@@ -41,7 +41,7 @@ export default function EducationSection() {
 
                 {/* Content Card */}
                 <div
-                  className={`pl-16 md:pl-0 w-full md:w-1/2 ${
+                  className={`pl-12 xs:pl-16 md:pl-0 w-full md:w-1/2 ${
                     idx % 2 === 0 ? "md:pr-12" : "md:pl-12"
                   }`}
                 >

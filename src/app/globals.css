@@ -109,8 +109,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    /* Fluid typography: 16px at 320px width, up to 18px at 1200px width */
+    font-size: clamp(16px, 1vw + 14px, 18px);
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden; /* prevent horizontal scroll */
   }
   
   /* Instagram-inspired dark mode gradient */
