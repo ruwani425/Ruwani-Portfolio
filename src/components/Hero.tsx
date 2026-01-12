@@ -3,13 +3,42 @@
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+
+const titles = [
+  "Full Stack Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Freelancer",
+  "Software Engineering Student",
+];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % titles.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center pt-24 pb-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
+
+      {/* Organic Wave Background - Right Side */}
+      <div className="absolute top-0 right-0 w-[90%] md:w-[55%] h-full z-0 pointer-events-none opacity-20 md:opacity-100 mix-blend-multiply dark:mix-blend-lighten">
+        <svg
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          className="w-full h-full fill-accent/10 dark:fill-primary/5"
+        >
+          <path d="M100 0V100H20C-20 70 50 50 20 0H100Z" />
+        </svg>
+      </div>
 
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
         {/* Left Col: Text Content */}
@@ -30,12 +59,20 @@ export default function Hero() {
           </MotionWrapper>
 
           <MotionWrapper direction="up" delay={0.3}>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-lg leading-relaxed">
-              <span className="text-foreground font-semibold">
-                Software Engineering Student
-              </span>{" "}
-              | Part-Time Freelancer
-            </p>
+            <div className="h-8 sm:h-10 mb-6 overflow-hidden relative w-full flex justify-center md:justify-start">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={index}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="text-xl sm:text-2xl text-foreground font-semibold"
+                >
+                  {titles[index]}
+                </motion.div>
+              </AnimatePresence>
+            </div>
             <p className="text-sm sm:text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
               I build responsive web applications and deliver custom software
               solutions. Specializing in modern technologies and best practices.
@@ -55,10 +92,11 @@ export default function Hero() {
                 />
               </a>
               <a
-                href="/cv.pdf"
+                href="/CV - Ruwani Ranthika.pdf"
+                download="Ruwani_Ranthika_CV.pdf"
                 className="px-8 py-3.5 border border-border bg-background/50 text-foreground rounded-full font-semibold hover:bg-accent/10 transition backdrop-blur-sm flex items-center justify-center gap-2"
               >
-                Download CV
+                Download My CV
                 <Download size={18} />
               </a>
             </div>

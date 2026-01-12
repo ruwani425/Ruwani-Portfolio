@@ -111,9 +111,10 @@ export const PROJECTS: Project[] = [
 ]
 
 export const SKILLS = {
-  frontend: ["React", "Next.js", "React Native", "Tailwind CSS", "Bootstrap", "HTML/CSS", "JavaScript", "jQuery", "Figma"],
-  backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Hibernate", "JPA", "Python", "RESTful APIs"],
-  tools: ["Git", "GitHub", "IntelliJ IDEA", "VS Code", "Postman", "Docker", "Linux", "JasperSoft Studio"],
+  languages: ["Java", "JavaScript", "Python"],
+  frameworks: ["Spring", "Spring Boot", "JavaFX", "React", "Next.js", "Node.js", "Express.js", "React Native", "HTML/CSS", "Hibernate", "JPA", "Tailwind CSS", "Bootstrap", "jQuery"],
+  databases: ["MySQL", "MongoDB"],
+  tools: ["Git", "GitHub", "Postman", "Linux", "Windows", "macOS", "IntelliJ IDEA", "VS Code", "NetBeans IDE", "Google Antigravity", "Figma", "JasperSoft Studio"],
 }
 
 export const EXPERTISE = [
