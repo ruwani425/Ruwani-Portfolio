@@ -93,8 +93,8 @@ export default function Hero() {
                 />
               </a>
               <a
-                href="/Ruwani_Ranthika_CV.pdf"
-                download="Ruwani_Ranthika_CV.pdf"
+                href="/Ruwani_Ranthika_Resume.pdf"
+                download="Ruwani_Ranthika_Resume.pdf"
                 className="px-8 py-3.5 border border-border bg-background/50 text-foreground rounded-full font-semibold hover:bg-accent/10 transition backdrop-blur-sm flex items-center justify-center gap-2"
               >
                 Download My CV
