@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-24 pb-20 px-4 xxs:px-3 sm:px-6 relative overflow-hidden w-full">
+    <section className="min-h-[calc(100vh-4rem)] md:min-h-[85vh] flex items-center pt-24 pb-12 px-4 xxs:px-3 sm:px-6 relative overflow-hidden w-full">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
 
@@ -40,11 +40,11 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12 relative z-10">
         {/* Left Col: Text Content */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left pt-8 md:pt-0">
           <MotionWrapper direction="up" delay={0.1}>
-            <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 backdrop-blur-sm">
+            <div className="inline-block mb-4 md:mb-6 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 backdrop-blur-sm">
               <span className="text-accent font-semibold text-xs sm:text-sm tracking-wide">
                 Available for Freelance
               </span>
@@ -52,7 +52,7 @@ export default function Hero() {
           </MotionWrapper>
 
           <MotionWrapper direction="up" delay={0.2}>
-            <h1 className="text-4xl xs:text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 md:mb-6 tracking-tight leading-tight">
               Hi, I'm <br />
               <span className="text-gradient-primary">Ruwani Ranthika</span>
             </h1>
@@ -112,7 +112,7 @@ export default function Hero() {
             className="relative"
           >
             {/* Responsive image size: small on mobile, medium on tablet, large on desktop */}
-            <div className="relative w-64 h-64 xxs:w-72 xxs:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+            <div className="relative w-64 h-64 xxs:w-72 xxs:h-72 md:w-80 md:h-80 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
               {/* Soft Gradient Ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent to-primary opacity-20 blur-2xl animate-pulse"></div>
 
