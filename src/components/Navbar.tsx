@@ -25,13 +25,15 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur border-b border-border z-50 transition-all duration-300">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a
             href="/"
-            className="font-bold text-lg text-accent z-50 relative"
-          ></a>
+            className="font-bold text-lg text-gradient-primary z-50 relative"
+          >
+            Ruwani
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4 lg:gap-8">
