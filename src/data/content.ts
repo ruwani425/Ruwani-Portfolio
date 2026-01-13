@@ -2,8 +2,8 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  github: string;
-  live: string;
+  github?: string;
+  live?: string;
   features?: string[];
   githubLinks?: { label: string; url: string }[];
 }
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Blood Bank Management System",
     description: "A comprehensive blood bank management system developed in two iterations: one using Layered Architecture and another using MVC Pattern. Features donor/patient management, inventory tracking, and dynamic reporting.",
-    tech: ["Java", "MySQL", "JavaFX", "JDBC", "MVC Pattern", "Layered Architecture"],
+    tech: ["Java", "MySQL", "JavaFX", "JDBC", "MVC Pattern", "Layered Architecture", "Object Oriented Programming (OOP)"],
     features: [
       "Two architectural implementations: MVC and Layered Architecture.",
       "Complete Donor and Patient management life-cycle.",
@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
       { label: "MVC Repo", url: "https://github.com/ruwani425/Blood-Bank-Management-System.git" },
       { label: "Layered Repo", url: "https://github.com/ruwani425/Blood-Bank-layerd-architecture.git" }
     ],
-    live: "#",
+
   },
   {
     title: "Adlync - Smart Classified Ads & Marketplace",
@@ -80,7 +80,8 @@ export const PROJECTS: Project[] = [
       "Secure background implementation with JWT and cookies."
     ],
     github: "https://github.com",
-    live: "https://youtube.com",
+    live: "https://youtu.be/GXPGD9f9S60?si=nnxOtfe3oj2NceIX",
+
   },
   {
     title: "Serenity Mental Health Therapy Center Management System",
@@ -96,7 +97,7 @@ export const PROJECTS: Project[] = [
       "Layered Architecture (Controller, BO, DAO, Entity, Util, View) and Design Patterns (Factory, Singleton)."
     ],
     github: "https://github.com/ruwani425/Mental-Health--Therapy-Center-Hibernate",
-    live: "#",
+
   },
   {
     title: "Theta Lounge - Floating Therapy Business",
@@ -110,7 +111,7 @@ export const PROJECTS: Project[] = [
       "Implemented role-based access control for admin and client users.",
       "Integrated Google Authentication for secure user login."
     ],
-    github: "#",
+
     live: "https://thetalounge.com",
   },
 

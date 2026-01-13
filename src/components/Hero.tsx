@@ -127,9 +127,9 @@ export default function Hero() {
                 />
               </div>
             </div>
-            {/* Decorative Elements around the frame - Orange Tint */}
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-orange-400/20 rounded-full blur-2xl -z-10"></div>
+            {/* Decorative Elements around the frame - Theme Tint */}
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl -z-10"></div>
           </motion.div>
         </div>
       </div>

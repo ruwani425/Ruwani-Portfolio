@@ -39,7 +39,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+                  className="text-sm font-medium text-muted-foreground hover:text-accent relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full transition-colors"
                 >
                   {link.label}
                 </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-2xl font-bold text-foreground hover:text-accent transition-colors"
+              className="text-2xl font-bold text-foreground hover:text-accent relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.label}
