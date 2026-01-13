@@ -74,8 +74,9 @@ export default function Hero() {
               </AnimatePresence>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              I build responsive web applications and deliver custom software
-              solutions. Specializing in modern technologies and best practices.
+              I engineer scalable web applications and deliver robust software
+              solutions, specializing in modern technologies and industry best
+              practices.
             </p>
           </MotionWrapper>
 

@@ -49,6 +49,37 @@ export const ADDITIONAL_EXPERIENCE = [
 
 export const PROJECTS: Project[] = [
   {
+    title: "Theta Lounge - Floating Therapy Business",
+    description: "Freelance Full-Stack Project | MERN Stack. Developed a full-stack web application for a floating therapy wellness center to manage client appointments and operational workflows.",
+    tech: [],
+    features: [
+      "Built a session-based tank management system, enabling tank-wise scheduling and availability tracking.",
+      "Implemented time slot calculation logic for accurate appointment booking and conflict prevention.",
+      "Developed a client appointment booking system with real-time availability.",
+      "Created an admin dashboard to manage tanks, operational days, appointments, and therapy packages.",
+      "Implemented role-based access control for admin and client users.",
+      "Integrated Google Authentication for secure user login."
+    ],
+
+    live: "https://thetalounge.com",
+  },
+  {
+    title: "Adlync - Smart Classified Ads & Marketplace",
+    description: "A full-stack web application built with Spring Boot (Java 21) and MySQL for managing classified ads. Features real-time chat, image uploads, and secure JWT authentication. (2nd Semester Final Project)",
+    tech: ["Spring Boot", "Java 21", "React", "MySQL", "Firebase", "WebSocket", "JWT", "Bootstrap", "jQuery", "Swagger"],
+    features: [
+      "Layered Architecture for clean code and scalability.",
+      "User Features: Account creation, Google login, ad posting, reporting, and live messaging.",
+      "Admin Features: Ad moderation, report management, and role-based access.",
+      "Responsive UI/UX using HTML, CSS, Bootstrap, and jQuery.",
+      "API Testing with Swagger UI.",
+      "Secure background implementation with JWT and cookies."
+    ],
+    github: "https://github.com",
+    live: "https://youtu.be/GXPGD9f9S60?si=nnxOtfe3oj2NceIX",
+
+  },
+  {
     title: "Blood Bank Management System",
     description: "A comprehensive blood bank management system developed in two iterations: one using Layered Architecture and another using MVC Pattern. Features donor/patient management, inventory tracking, and dynamic reporting.",
     tech: ["Java", "MySQL", "JavaFX", "JDBC", "MVC Pattern", "Layered Architecture", "Object Oriented Programming (OOP)"],
@@ -68,22 +99,6 @@ export const PROJECTS: Project[] = [
 
   },
   {
-    title: "Adlync - Smart Classified Ads & Marketplace",
-    description: "A full-stack web application built with Spring Boot (Java 21) and MySQL for managing classified ads. Features real-time chat, image uploads, and secure JWT authentication. (2nd Semester Final Project)",
-    tech: ["Spring Boot", "Java 21", "React", "MySQL", "Firebase", "WebSocket", "JWT", "Bootstrap", "jQuery", "Swagger"],
-    features: [
-      "Layered Architecture for clean code and scalability.",
-      "User Features: Account creation, Google login, ad posting, reporting, and live messaging.",
-      "Admin Features: Ad moderation, report management, and role-based access.",
-      "Responsive UI/UX using HTML, CSS, Bootstrap, and jQuery.",
-      "API Testing with Swagger UI.",
-      "Secure background implementation with JWT and cookies."
-    ],
-    github: "https://github.com",
-    live: "https://youtu.be/GXPGD9f9S60?si=nnxOtfe3oj2NceIX",
-
-  },
-  {
     title: "Serenity Mental Health Therapy Center Management System",
     description: "A comprehensive desktop application built with JavaFX and Hibernate ORM for managing daily operations at a mental health therapy center. Digitizes registration, scheduling, and payment processes. (GDSE 71/72 ORM Concepts Coursework)",
     tech: ["JavaFX", "Hibernate ORM", "MySQL", "JasperSoft Studio", "BCrypt", "Figma", "Java"],
@@ -99,22 +114,6 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/ruwani425/Mental-Health--Therapy-Center-Hibernate",
 
   },
-  {
-    title: "Theta Lounge - Floating Therapy Business",
-    description: "Freelance Full-Stack Project | MERN Stack. Developed a full-stack web application for a floating therapy wellness center to manage client appointments and operational workflows.",
-    tech: [],
-    features: [
-      "Built a session-based tank management system, enabling tank-wise scheduling and availability tracking.",
-      "Implemented time slot calculation logic for accurate appointment booking and conflict prevention.",
-      "Developed a client appointment booking system with real-time availability.",
-      "Created an admin dashboard to manage tanks, operational days, appointments, and therapy packages.",
-      "Implemented role-based access control for admin and client users.",
-      "Integrated Google Authentication for secure user login."
-    ],
-
-    live: "https://thetalounge.com",
-  },
-
 ]
 
 export const SKILLS = {

@@ -28,9 +28,10 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href="/" className="font-bold text-lg text-accent z-50 relative">
-            Portfolio
-          </a>
+          <a
+            href="/"
+            className="font-bold text-lg text-accent z-50 relative"
+          ></a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4 lg:gap-8">
