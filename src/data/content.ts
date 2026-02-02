@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS = {
   languages: ["Java", "JavaScript", "Python"],
-  frameworks: ["Spring", "Spring Boot", "JavaFX", "React", "Next.js", "Node.js", "Express.js", "React Native", "HTML/CSS", "Hibernate", "JPA", "Tailwind CSS", "Bootstrap", "jQuery"],
+  frameworks: ["Angular", "Spring", "Spring Boot", "JavaFX", "React", "Next.js", "Node.js", "Express.js", "React Native", "HTML/CSS", "Hibernate", "JPA", "Tailwind CSS", "Bootstrap", "jQuery"],
   databases: ["MySQL", "MongoDB"],
   tools: ["Git", "GitHub", "Postman", "Linux", "Windows", "macOS", "IntelliJ IDEA", "VS Code", "NetBeans IDE", "Google Antigravity", "Figma", "JasperSoft Studio"],
 }

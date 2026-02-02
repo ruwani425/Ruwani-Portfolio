@@ -28,6 +28,7 @@ import {
   SiHibernate,
   SiPostman,
   SiApache,
+  SiAngular,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
@@ -45,6 +46,7 @@ const skillIcons: Record<string, React.ReactNode> = {
   SQL: <DiDatabase className="text-gray-400" />,
 
   // Frameworks & Tech
+  Angular: <SiAngular className="text-[#DD0031]" />,
   Spring: <SiSpring className="text-[#6DB33F]" />,
   "Spring Boot": <SiSpringboot className="text-[#6DB33F]" />,
   JavaFX: <FaJava className="text-[#007396]" />, // Using Java icon as fallback/related
