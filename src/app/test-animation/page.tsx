@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundAnimation from "../components/BackgroundAnimation";
+import BackgroundAnimation from "../../components/BackgroundAnimation";
 
 export default function TestPage() {
   return (
