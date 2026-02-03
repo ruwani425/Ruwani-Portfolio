@@ -1,10 +1,12 @@
 "use client";
 import MotionWrapper from "./MotionWrapper";
+import BackgroundAnimation from "./BackgroundAnimation";
 
 export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 overflow-hidden relative">
-      <div className="max-w-6xl mx-auto">
+      <BackgroundAnimation />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
           {/* Left Column: Heading & Visuals */}
           <MotionWrapper direction="right" delay={0.1}>
