@@ -41,6 +41,12 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const EDUCATION = [
   {
+    degree: "BSc (Hons) Computing Science (Level 6 Top-up)",
+    institution: "Wrexham University (UK)",
+    year: "Sep 2026 - Present",
+    details: "Pursuing a UK-accredited Honours degree in Computing, focusing on advanced software engineering, systems development, database management, and emerging computing technologies to build upon diploma qualifications.",
+  },
+  {
     degree: "Graduate Diploma in Software Engineering (GDSE-72)",
     institution: "Institute of Java and Software Engineering (IJSE)",
     year: "Feb 2024 - Present",
