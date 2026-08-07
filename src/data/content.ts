@@ -8,6 +8,37 @@ export interface Project {
   githubLinks?: { label: string; url: string }[];
 }
 
+export interface WorkExperience {
+  role: string;
+  company: string;
+  companyUrl?: string;
+  location: string;
+  duration: string;
+  type: string;
+  project?: string;
+  points: string[];
+}
+
+export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    role: "Software Engineering Intern",
+    company: "Code3x (Pvt) Ltd.",
+    companyUrl: "https://code3x.tech/",
+    location: "Colombo, Sri Lanka",
+    duration: "Mar 2026 – Sep 2026",
+    type: "Full-Time | Remote",
+    project: "Rentzee – Vehicle Rental Platform",
+    points: [
+      "Developed and maintained scalable backend services and RESTful APIs using Node.js, Fastify, and TypeScript, while contributing to frontend development with React.",
+      "Implemented new features and resolved bugs based on business requirements, collaborating with the development team to deliver reliable and high-quality software.",
+      "Worked extensively with Git and GitHub, including branch management, creating and reviewing pull requests, resolving merge conflicts, and maintaining code quality through peer reviews.",
+      "Followed Agile Scrum practices by participating in daily stand-up meetings, sprint planning, and retrospective sessions, while managing development tasks using Jira.",
+      "Assisted with CI/CD workflows by deploying application updates to the staging environment using GitHub Actions and validating features before release.",
+      "Collaborated with cross-functional team members to test, debug, and maintain applications while following clean code principles and software engineering best practices."
+    ]
+  }
+]
+
 export const EDUCATION = [
   {
     degree: "Graduate Diploma in Software Engineering (GDSE-72)",

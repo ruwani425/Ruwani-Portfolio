@@ -120,10 +120,10 @@ export default function Hero() {
               {/* Main Image Container */}
               <div className="relative w-full h-full rounded-full border-[6px] border-background shadow-2xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 ring-4 ring-primary/20">
                 <Image
-                  src="/IMG_20260314_223017.jpg.jpeg"
+                  src="/ruwani.png"
                   alt="Ruwani Ranthika"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                 />
               </div>

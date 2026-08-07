@@ -1,11 +1,11 @@
 "use client";
-import { FREELANCE_WORK, ADDITIONAL_EXPERIENCE } from "../data/content";
+import { WORK_EXPERIENCE, FREELANCE_WORK, ADDITIONAL_EXPERIENCE } from "../data/content";
 import MotionWrapper from "./MotionWrapper";
 
 export default function Freelance() {
   return (
     <section
-      id="freelance"
+      id="experience"
       className="py-20 px-4 xxs:px-3 sm:px-6 overflow-hidden"
     >
       <div className="max-w-3xl mx-auto">
@@ -14,6 +14,66 @@ export default function Freelance() {
             Professional Experience
           </h2>
         </MotionWrapper>
+
+        {/* Work Experience Section */}
+        {WORK_EXPERIENCE && WORK_EXPERIENCE.length > 0 && (
+          <div className="mb-12">
+            <MotionWrapper delay={0.1} direction="left">
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-primary">
+                <span className="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_rgba(var(--accent))]"></span>
+                Work Experience
+              </h3>
+            </MotionWrapper>
+            <div className="space-y-6">
+              {WORK_EXPERIENCE.map((exp, idx) => (
+                <MotionWrapper key={idx} delay={0.2 + idx * 0.1}>
+                  <div className="glass-card rounded-xl p-5 sm:p-6 hover:bg-card/80 transition-all duration-300 hover:scale-[1.01]">
+                    <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3">
+                      <div>
+                        <h4 className="font-bold text-lg text-foreground">
+                          {exp.role}
+                        </h4>
+                        <p className="text-sm font-semibold text-primary">
+                          {exp.companyUrl ? (
+                            <a
+                              href={exp.companyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline hover:text-accent transition-colors"
+                            >
+                              {exp.company}
+                            </a>
+                          ) : (
+                            exp.company
+                          )}{" "}
+                          <span className="text-muted-foreground font-normal">| {exp.location}</span>
+                        </p>
+                      </div>
+                      <span className="text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-3 py-1 rounded-full whitespace-nowrap">
+                        {exp.type}
+                      </span>
+                    </div>
+                    
+                    <div className="flex flex-col sm:flex-row justify-between text-xs text-muted-foreground mb-4 font-mono gap-1">
+                      <span>{exp.duration}</span>
+                      {exp.project && (
+                        <span className="text-accent font-semibold">{exp.project}</span>
+                      )}
+                    </div>
+
+                    <ul className="list-disc list-outside ml-4 space-y-2 text-muted-foreground text-sm">
+                      {exp.points.map((point, pIdx) => (
+                        <li key={pIdx} className="leading-relaxed">
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </MotionWrapper>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mb-12">
           <MotionWrapper delay={0.1} direction="left">
