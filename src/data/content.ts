@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
       "Rich mobile UI built with React Native and Expo."
     ],
     github: "https://github.com/GDSE72/Go-Plan-Mobile-App",
-    apk: "https://github.com/GDSE72/Go-Plan-Mobile-App/releases",
+    apk: "https://expo.dev/accounts/ruwani425/projects/goPlan/builds/a8baaceb-a112-4e9c-a57a-6207469da357",
   },
   {
     title: "Theta Lounge – Floating Therapy Platform",
