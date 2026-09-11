@@ -5,6 +5,7 @@ export interface Project {
   tech: string[];
   github?: string;
   live?: string;
+  apk?: string;
   features?: string[];
   githubLinks?: { label: string; url: string }[];
 }
@@ -140,6 +141,7 @@ export const PROJECTS: Project[] = [
       "Rich mobile UI built with React Native and Expo."
     ],
     github: "https://github.com/GDSE72/Go-Plan-Mobile-App",
+    apk: "https://github.com/GDSE72/Go-Plan-Mobile-App/releases",
   },
   {
     title: "Theta Lounge – Floating Therapy Platform",
@@ -153,7 +155,6 @@ export const PROJECTS: Project[] = [
       "Automated email notifications and background cron jobs for daily expiration checks."
     ],
     live: "https://thetalounge.com",
-    github: "https://github.com/ruwani425",
   },
   {
     title: "Blood Bank Management System",

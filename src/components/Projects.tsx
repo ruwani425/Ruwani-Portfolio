@@ -1,7 +1,7 @@
 "use client";
 
 import { PROJECTS } from "../data/content";
-import { Github, ExternalLink, Youtube } from "lucide-react";
+import { Github, ExternalLink, Youtube, Smartphone } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 
 export default function Projects() {
@@ -89,6 +89,17 @@ export default function Projects() {
                           <ExternalLink size={18} />
                         )}
                         {isYoutube ? "YouTube" : "Live Preview"}
+                      </a>
+                    )}
+                    {project.apk && (
+                      <a
+                        href={project.apk}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        <Smartphone size={18} />
+                        Build APK File
                       </a>
                     )}
                   </div>
