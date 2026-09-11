@@ -1,5 +1,6 @@
 export interface Project {
   title: string;
+  subtitle?: string;
   description: string;
   tech: string[];
   github?: string;
@@ -8,177 +9,208 @@ export interface Project {
   githubLinks?: { label: string; url: string }[];
 }
 
+export interface Code3xProject {
+  title: string;
+  subtitle: string;
+  url?: string;
+  impactBadge: string;
+  points: string[];
+  tech: string[];
+}
+
 export interface WorkExperience {
   role: string;
   company: string;
   companyUrl?: string;
+  logo?: string;
   location: string;
   duration: string;
   type: string;
-  project?: string;
-  points: string[];
 }
 
-export const WORK_EXPERIENCE: WorkExperience[] = [
-  {
-    role: "Software Engineering Intern",
-    company: "Code3x (Pvt) Ltd.",
-    companyUrl: "https://code3x.tech/",
-    location: "Colombo, Sri Lanka",
-    duration: "Mar 2026 – Sep 2026",
-    type: "Full-Time | Remote",
-    project: "Rentzee – Vehicle Rental Platform",
-    points: [
-      "Developed and maintained scalable backend services and RESTful APIs using Node.js, Fastify, and TypeScript, while contributing to frontend development with React.",
-      "Implemented new features and resolved bugs based on business requirements, collaborating with the development team to deliver reliable and high-quality software.",
-      "Worked extensively with Git and GitHub, including branch management, creating and reviewing pull requests, resolving merge conflicts, and maintaining code quality through peer reviews.",
-      "Followed Agile Scrum practices by participating in daily stand-up meetings, sprint planning, and retrospective sessions, while managing development tasks using Jira.",
-      "Assisted with CI/CD workflows by deploying application updates to the staging environment using GitHub Actions and validating features before release.",
-      "Collaborated with cross-functional team members to test, debug, and maintain applications while following clean code principles and software engineering best practices."
-    ]
-  }
-]
+export const WORK_EXPERIENCE: WorkExperience = {
+  role: "Software Engineering Intern",
+  company: "Code3x (Pvt) Ltd.",
+  companyUrl: "https://code3x.tech/",
+  logo: "/code3x.jpeg",
+  location: "Colombo, Sri Lanka",
+  duration: "Mar 2026 – Sep 2026",
+  type: "Full-Time | Remote",
+};
 
-export const EDUCATION = [
+export const CODE3X_PROJECTS: Code3xProject[] = [
   {
-    degree: "BSc (Hons) Computing Science (Level 6 Top-up)",
-    institution: "Wrexham University (UK)",
-    year: "Sep 2026 - Present",
-    details: "Pursuing a UK-accredited Honours degree in Computing, focusing on advanced software engineering, systems development, database management, and emerging computing technologies to build upon diploma qualifications.",
+    title: "RentEaze",
+    subtitle: "Multi-Tenant Vehicle Rental Platform",
+    url: "https://rentzee.lk",
+    impactBadge: "Primary Backend · 200+ REST APIs · 800+ Commits",
+    points: [
+      "Engineered 200+ production-ready REST APIs across 15 core domains as primary backend developer (52%+ codebase ownership).",
+      "Built real-time cloud infra: live multi-currency exchange engine, push notifications, and customer-vendor messaging.",
+      "Managed 190+ tag-based CI/CD deployments via GitHub Actions within Agile Scrum sprints."
+    ],
+    tech: ["Node.js", "Fastify", "TypeScript", "Prisma ORM", "MongoDB", "Redis", "React"]
   },
   {
-    degree: "Graduate Diploma in Software Engineering (GDSE-72)",
-    institution: "Institute of Java and Software Engineering (IJSE)",
-    year: "Feb 2024 - Present",
-    details: "Completed three semesters of a four-semester higher diploma program. Maintained a GPA of 3.52 in the first semester.",
+    title: "Digital Tourism",
+    subtitle: "Backend Service Migration",
+    url: "https://digitaltourism.travel",
+    impactBadge: "93 Database Entities · Unified ERD & Migration",
+    points: [
+      "Analyzed existing Spring Boot & Node.js services to design a unified consolidated backend architecture.",
+      "Reverse-engineered and modeled 93 database entities, designing a comprehensive ERD and migration strategy.",
+      "Developed target Prisma schema and collaborated on the complete migration architecture report."
+    ],
+    tech: ["Node.js", "TypeScript", "Prisma ORM", "MySQL", "Spring Boot", "Java", "ERD"]
   },
   {
-    degree: "G.C.E. Advanced Level (Biological Science)",
-    institution: "Wanduramba Central College - Galle",
-    year: "Oct 2020",
-    details: "Subjects: Physics (S), Biology (S), General English (S), Common General Test (Pass)",
-  },
-  {
-    degree: "G.C.E. Ordinary Level",
-    institution: "Wanduramba Central College - Galle",
-    year: "Dec 2017",
-    details: "6A, 2B, 1C",
-  },
-]
+    title: "MOOC Platform",
+    subtitle: "Multilingual Online Learning Platform",
+    impactBadge: "Reusable UI System · Sinhala/English Localization · PWA",
+    points: [
+      "Built reusable UI component library and centralized design system following Figma specifications.",
+      "Implemented API client & state management architecture using Redux Toolkit with optimistic updates and caching.",
+      "Delivered English/Sinhala localization, core course interfaces, and progressive web app (PWA) support."
+    ],
+    tech: ["React 19", "TypeScript", "Vite", "Material UI", "Redux Toolkit", "PWA", "Firebase"]
+  }
+];
 
 export const FREELANCE_WORK = [
   {
     title: "Freelance Full-Stack Developer",
-    description: "Self-Employed part-time developer working on diverse projects including Theta Lounge floating therapy business.",
-    duration: "Oct 2025 - Present",
-    type: "Self-Employed",
-  },
-]
+    client: "Theta Lounge – Floating Therapy Business",
+    url: "https://thetalounge.com",
+    duration: "Oct 2025 – Present",
+    type: "Freelance",
+    tech: ["React 19", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+    description: "Developed a commercial full-stack wellness management platform featuring automated session scheduling, zero double-booking transaction safety, and an analytics-rich admin dashboard."
+  }
+];
 
 export const ADDITIONAL_EXPERIENCE = [
   {
     title: "Marketing Promotion Officer",
-    description: "Customer engagement and promotional support for Astra and Link Natural.",
-    duration: "Dec 2024 - Aug 2025",
+    client: "Astra & Link Natural",
+    duration: "Dec 2024 – Aug 2025",
     type: "Part-Time",
+    description: "Customer engagement and promotional support for Astra and Link Natural."
+  }
+];
+
+export const EDUCATION = [
+  {
+    degree: "BSc (Hons) Computing",
+    institution: "Wrexham University (UK)",
+    year: "Oct 2026 – Present",
+    details: "Pursuing a UK-accredited Honours degree in Computing, focusing on advanced software engineering, systems development, database management, and emerging computing technologies.",
   },
-]
+  {
+    degree: "Higher Diploma in Software Engineering (GDSE)",
+    institution: "Institute of Java and Software Engineering (IJSE)",
+    year: "Feb 2024 – Sep 2026",
+    details: "Completed intensive higher diploma in software engineering covering Java enterprise development, full-stack web applications, database architecture, design patterns, and clean code principles.",
+  },
+];
 
 export const PROJECTS: Project[] = [
   {
-    title: "Theta Lounge - Floating Therapy Business",
-    description: "Freelance Full-Stack Project | MERN Stack. Developed a full-stack web application for a floating therapy wellness center to manage client appointments and operational workflows.",
-    tech: [],
+    title: "Adlync – Smart Classified Ads & Marketplace System",
+    subtitle: "Spring Boot · Java 21 · Full-Stack",
+    description: "Developed a full-stack classified marketplace where users can post and manage ads, manage profiles, make payments, and chat with sellers in real time. Implemented role-based access for Admin, Moderator, and User, including ad approvals, payment reviews, report management, and ratings. Built secure authentication, image uploads, and responsive UI with support for Google login and JWT-based access.",
+    tech: ["Spring Boot", "Java 21", "MySQL", "Bootstrap", "jQuery", "AJAX", "JSON", "Firebase", "JWT", "WebSocket", "Swagger UI", "Draw.io"],
     features: [
-      "Built a session-based tank management system, enabling tank-wise scheduling and availability tracking.",
-      "Implemented time slot calculation logic for accurate appointment booking and conflict prevention.",
-      "Developed a client appointment booking system with real-time availability.",
-      "Created an admin dashboard to manage tanks, operational days, appointments, and therapy packages.",
-      "Implemented role-based access control for admin and client users.",
-      "Integrated Google Authentication for secure user login."
+      "Layered Architecture for clean code, high cohesion, and scalability.",
+      "User Features: Account creation, Google login, ad posting, reporting, and live messaging.",
+      "Admin & Moderator: Ad moderation, payment reviews, report management, and role-based access.",
+      "Real-time chat powered by WebSocket and secure background JWT authentication."
     ],
-
-    live: "https://thetalounge.com",
+    live: "https://youtu.be/GXPGD9f9S60?si=nnxOtfe3oj2NceIX",
+    github: "https://github.com/ruwani425",
   },
   {
-    title: "Adlync - Smart Classified Ads & Marketplace",
-    description: "A full-stack web application built with Spring Boot (Java 21) and MySQL for managing classified ads. Features real-time chat, image uploads, and secure JWT authentication. (2nd Semester Final Project)",
-    tech: ["Spring Boot", "Java 21", "React", "MySQL", "Firebase", "WebSocket", "JWT", "Bootstrap", "jQuery", "Swagger"],
+    title: "GoPlan – AI-Powered Travel Planning Mobile App",
+    subtitle: "React Native · Expo · Google Gemini API",
+    description: "Developed an AI-powered mobile travel planning application with user authentication, profile management, and cloud-based travel data. Integrated Google Gemini API to generate personalized travel plans and recommendations based on user requirements. Processed and managed large travel datasets using Python and integrated cloud image storage for destination content.",
+    tech: ["React Native", "Expo", "Google Gemini API", "Firebase Auth", "Firestore", "Redux", "Python", "Cloudinary"],
     features: [
-      "Layered Architecture for clean code and scalability.",
-      "User Features: Account creation, Google login, ad posting, reporting, and live messaging.",
-      "Admin Features: Ad moderation, report management, and role-based access.",
-      "Responsive UI/UX using HTML, CSS, Bootstrap, and jQuery.",
-      "API Testing with Swagger UI.",
-      "Secure background implementation with JWT and cookies."
+      "AI-driven itinerary generator using Google Gemini API for personalized recommendations.",
+      "Cloud-based travel data with Firebase Auth and Firestore real-time synchronization.",
+      "Custom Python data processing pipelines for travel and location datasets.",
+      "Rich mobile UI built with React Native and Expo."
     ],
-    github: "https://github.com",
-    live: "https://youtu.be/GXPGD9f9S60?si=nnxOtfe3oj2NceIX",
-
+    github: "https://github.com/ruwani425",
+  },
+  {
+    title: "Theta Lounge – Floating Therapy Platform",
+    subtitle: "MERN Stack · Full-Stack Commercial Solution",
+    description: "Full-stack web application for a wellness therapy center featuring automated session scheduling, package credit redemptions, and an analytics-rich admin dashboard.",
+    tech: ["React 19", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Mongoose ORM", "JWT", "Firebase Auth"],
+    features: [
+      "Custom staggered slot scheduling algorithm based on operational parameters and capacity.",
+      "MongoDB ACID transactions ensuring zero double-booking under concurrent traffic.",
+      "Admin analytics dashboard visualizing revenue growth, tank utilization, and booking trends.",
+      "Automated email notifications and background cron jobs for daily expiration checks."
+    ],
+    live: "https://thetalounge.com",
+    github: "https://github.com/ruwani425",
   },
   {
     title: "Blood Bank Management System",
+    subtitle: "Java · JavaFX · MySQL",
     description: "A comprehensive blood bank management system developed in two iterations: one using Layered Architecture and another using MVC Pattern. Features donor/patient management, inventory tracking, and dynamic reporting.",
-    tech: ["Java", "MySQL", "JavaFX", "JDBC", "MVC Pattern", "Layered Architecture", "Object Oriented Programming (OOP)"],
+    tech: ["Java", "MySQL", "JavaFX", "JDBC", "MVC Pattern", "Layered Architecture", "OOP"],
     features: [
-      "Two architectural implementations: MVC and Layered Architecture.",
-      "Complete Donor and Patient management life-cycle.",
-      "blood stock monitoring and inventory tracking.",
-      "Hospital and Campaign management modules.",
-      "User authentication and role-based authorization.",
-      "Dynamic reporting and email notifications."
+      "Dual architectural implementations: MVC and Layered Architecture.",
+      "Complete Donor and Patient management life-cycle and blood stock monitoring.",
+      "Hospital and Campaign management modules with dynamic JasperSoft reporting."
     ],
-    github: "#", // Placeholder, will use githubLinks
     githubLinks: [
       { label: "MVC Repo", url: "https://github.com/ruwani425/Blood-Bank-Management-System.git" },
       { label: "Layered Repo", url: "https://github.com/ruwani425/Blood-Bank-layerd-architecture.git" }
     ],
-
   },
   {
-    title: "Serenity Mental Health Therapy Center Management System",
-    description: "A comprehensive desktop application built with JavaFX and Hibernate ORM for managing daily operations at a mental health therapy center. Digitizes registration, scheduling, and payment processes. (GDSE 71/72 ORM Concepts Coursework)",
+    title: "Serenity Mental Health Therapy Center",
+    subtitle: "JavaFX · Hibernate ORM · MySQL",
+    description: "A comprehensive desktop application built with JavaFX and Hibernate ORM for managing daily operations at a mental health therapy center. Digitizes registration, scheduling, and payment processes.",
     tech: ["JavaFX", "Hibernate ORM", "MySQL", "JasperSoft Studio", "BCrypt", "Figma", "Java"],
     features: [
-      "Role-based Login System (Admin & Receptionist).",
-      "Therapist and Therapy Program Management.",
-      "Patient Registration, Profile Handling, and Session Scheduling.",
-      "Payment Processing & Invoice Generation.",
-      "Dynamic Reports with JasperSoft Studio.",
-      "Secure Password Storage with BCrypt.",
-      "Layered Architecture (Controller, BO, DAO, Entity, Util, View) and Design Patterns (Factory, Singleton)."
+      "Role-based Login System (Admin & Receptionist) with BCrypt encryption.",
+      "Therapist and Therapy Program Management with invoice generation.",
+      "Layered Architecture (Controller, BO, DAO, Entity, Util) with Factory & Singleton patterns."
     ],
     github: "https://github.com/ruwani425/Mental-Health--Therapy-Center-Hibernate",
-
   },
-]
+];
 
 export const SKILLS = {
-  languages: ["Java", "JavaScript", "Python"],
-  frameworks: ["Angular", "Spring", "Spring Boot", "JavaFX", "React", "Next.js", "Node.js", "Express.js", "React Native", "HTML/CSS", "Hibernate", "JPA", "Tailwind CSS", "Bootstrap", "jQuery"],
-  databases: ["MySQL", "MongoDB"],
-  tools: ["Git", "GitHub", "Postman", "Linux", "Windows", "macOS", "IntelliJ IDEA", "VS Code", "NetBeans IDE", "Google Antigravity", "Figma", "JasperSoft Studio"],
-}
+  backend: ["Java", "Spring", "Spring Boot", "Java EE", "Node.js", "Express.js", "Fastify", "Hibernate", "JPA", "Python", "REST APIs", "JWT"],
+  frontend: ["HTML", "CSS", "TypeScript", "JavaScript", "React", "Material UI", "jQuery", "JavaFX", "React Native", "Figma", "PWA"],
+  databases: ["MySQL", "MongoDB", "JDBC", "ORM", "Prisma ORM", "Redis", "Firestore"],
+  cloudAndTools: ["Google Cloud Platform", "Firebase", "Vercel", "Docker", "Git", "GitHub", "GitHub Actions", "Postman", "Swagger UI", "MongoDB Compass", "Jira", "AWS S3"],
+  architecture: ["MVC Architecture", "Layered Architecture", "Design Patterns", "Object-Oriented Programming (OOP)", "Programming Fundamentals", "Computer Networking"]
+};
 
 export const EXPERTISE = [
   {
-    title: "Rapid Application Development",
-    description: " delivering high-quality prototypes and MVPs at speed using modern frameworks like Next.js and Tailwind CSS to accelerate time-to-market.",
+    title: "Full-Stack Web Development",
+    description: "Engineering scalable web applications and high-performance RESTful APIs using Node.js, Fastify, Spring Boot, React, and TypeScript.",
     icon: "Zap",
   },
   {
-    title: "Enterprise Web Applications",
-    description: "Architecting scalable, secure, and robust enterprise-grade web solutions using Spring Boot and Microservices for complex business needs.",
+    title: "Database Design & Migration",
+    description: "Architecting complex relational & NoSQL schemas, reverse engineering entity relationships, and conducting large-scale database migrations with Prisma ORM.",
     icon: "Building",
   },
   {
     title: "Mobile App Development",
-    description: "Designing and developing intuitive cross-platform mobile applications for Android and iOS using React Native, focused on performance.",
+    description: "Designing and developing intuitive cross-platform mobile applications using React Native and Expo, integrating AI APIs like Google Gemini.",
     icon: "Smartphone",
   },
   {
     title: "Desktop App Development",
-    description: "Building efficient, standalone desktop software using JavaFX and Electron, ensuring seamless offline functionality and rich user experiences.",
+    description: "Building efficient, standalone desktop software using JavaFX and Hibernate ORM, following layered architecture and clean design patterns.",
     icon: "Monitor",
   },
 ];

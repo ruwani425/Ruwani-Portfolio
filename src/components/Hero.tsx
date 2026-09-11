@@ -7,11 +7,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const titles = [
+  "Software Engineer",
   "Full Stack Developer",
-  "Frontend Developer",
   "Backend Developer",
+  "Frontend Developer",
   "Freelancer",
-  "Software Engineering Student",
+  "AI-Assisted Developer",
 ];
 
 export default function Hero() {
@@ -25,24 +26,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-[calc(100vh-4rem)] md:min-h-[85vh] flex items-center pt-24 pb-12 px-4 xxs:px-3 sm:px-6 relative overflow-hidden w-full">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/20 rounded-full blur-[100px] -z-10 animate-pulse" />
+    <section className="min-h-[calc(100vh-4rem)] flex items-center pt-24 pb-16 px-4 xxs:px-3 sm:px-6 md:px-8 relative overflow-hidden w-full">
+      {/* Dynamic Ambient Theme Glows */}
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[550px] md:h-[550px] bg-primary/15 rounded-full blur-[120px] -z-10 pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[250px] h-[250px] md:w-[450px] md:h-[450px] bg-accent/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
-      {/* Organic Wave Background - Right Side */}
-      <div className="absolute top-0 right-0 w-[90%] md:w-[55%] h-full z-0 pointer-events-none opacity-20 md:opacity-100 mix-blend-multiply dark:mix-blend-lighten">
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="w-full h-full fill-accent/10 dark:fill-primary/10"
-        >
-          <path d="M100 0V100H20C-20 70 50 50 20 0H100Z" />
-        </svg>
-      </div>
-
-      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12 relative z-10">
+      <div className="max-w-6xl xl:max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-16 relative z-10">
         {/* Left Col: Text Content */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left pt-8 md:pt-0">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <MotionWrapper direction="up" delay={0.1}>
             <div className="inline-block mb-4 md:mb-6 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 backdrop-blur-sm">
               <span className="text-accent font-semibold text-xs sm:text-sm tracking-wide">
@@ -52,7 +43,7 @@ export default function Hero() {
           </MotionWrapper>
 
           <MotionWrapper direction="up" delay={0.2}>
-            <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 md:mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl xs:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 md:mb-6 tracking-tight leading-tight">
               Hi, I'm <br />
               <span className="text-gradient-primary">Ruwani Ranthika</span>
             </h1>
@@ -73,7 +64,7 @@ export default function Hero() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <p className="text-sm sm:text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed">
               I engineer scalable web applications and deliver robust software
               solutions, specializing in modern technologies and industry best
               practices.
@@ -104,33 +95,27 @@ export default function Hero() {
           </MotionWrapper>
         </div>
 
-        {/* Right Col: Image */}
-        <div className="flex-1 flex justify-center md:justify-end">
+        {/* Right Col: Circular Profile Image with Glowing Rim */}
+        <div className="flex justify-center md:justify-end items-center relative">
           <motion.div
-            initial={{ opacity: 0, x: 100, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative flex items-center justify-center"
           >
-            {/* Responsive image size: small on mobile, medium on tablet, large on desktop */}
-            <div className="relative w-64 h-64 xxs:w-72 xxs:h-72 md:w-80 md:h-80 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
-              {/* Soft Gradient Ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent to-primary opacity-20 blur-2xl animate-pulse"></div>
+            {/* Ambient Purple/Pink Glow behind circular avatar */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#FCAF45] rounded-full blur-[45px] opacity-60 scale-105 pointer-events-none" />
 
-              {/* Main Image Container */}
-              <div className="relative w-full h-full rounded-full border-[6px] border-background shadow-2xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 ring-4 ring-primary/20">
-                <Image
-                  src="/ruwani.png"
-                  alt="Ruwani Ranthika"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                />
-              </div>
+            {/* Circular Image Frame */}
+            <div className="relative w-[280px] h-[280px] xxs:w-[310px] xxs:h-[310px] sm:w-[360px] sm:h-[360px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden border-2 border-primary/50 shadow-2xl z-10">
+              <Image
+                src="/ruwani.png"
+                alt="Ruwani Ranthika"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
-            {/* Decorative Elements around the frame - Theme Tint */}
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl -z-10"></div>
           </motion.div>
         </div>
       </div>

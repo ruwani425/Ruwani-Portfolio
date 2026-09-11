@@ -19,7 +19,7 @@ export default function About() {
                 <span className="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-accent rounded-full"></span>
               </h2>
               <p className="text-lg font-medium text-muted-foreground mb-4">
-                Full Stack Developer &<br /> Software Engineering Student
+                Software Engineer &<br /> Full-Stack Developer
               </p>
             </div>
           </MotionWrapper>
@@ -32,12 +32,12 @@ export default function About() {
                   My Background
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
-                  I am a Software Engineering undergraduate currently pursuing a
-                  Higher Diploma in Software Engineering, with hands-on
-                  experience in developing desktop and web applications. I'm a
-                  fast learner with strong full stack development skills, always
-                  prioritizing clean code principles and industry best
-                  practices.
+                  I am a Software Engineer who has completed a Higher Diploma in
+                  Software Engineering (IJSE) and is currently pursuing a BSc (Hons) in
+                  Computing at Wrexham University (UK). With hands-on industry experience
+                  through a six-month full-stack software engineering internship and
+                  freelance development, I specialize in building scalable web applications,
+                  RESTful APIs, and cloud-native solutions following clean code principles.
                 </p>
               </div>
             </MotionWrapper>
@@ -48,12 +48,10 @@ export default function About() {
                   My Vision
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
-                  I actively adapt to new technologies and embrace AI-driven
-                  development. My journey involves applying modern tools and
-                  frameworks through both academic and freelance projects. I am
-                  passionate about continuous learning and plan to pursue a
-                  top-up degree while building a strong career as a full stack
-                  software engineer.
+                  I actively adapt to emerging technologies and embrace AI-assisted
+                  software development (such as Google Gemini, Next.js, and modern cloud
+                  architectures). I am passionate about engineering high-quality, resilient
+                  systems and growing as a world-class full-stack software engineer.
                 </p>
               </div>
             </MotionWrapper>
