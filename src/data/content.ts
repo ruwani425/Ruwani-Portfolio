@@ -41,7 +41,7 @@ export const WORK_EXPERIENCE: WorkExperience = {
 
 export const CODE3X_PROJECTS: Code3xProject[] = [
   {
-    title: "RentEaze",
+    title: "Rentzee",
     subtitle: "Multi-Tenant Vehicle Rental Platform",
     url: "https://rentzee.lk",
     impactBadge: "Primary Backend · 200+ REST APIs · 800+ Commits",
