@@ -116,7 +116,7 @@ export const EDUCATION = [
 export const PROJECTS: Project[] = [
   {
     title: "Adlync – Smart Classified Ads & Marketplace System",
-    subtitle: "Spring Boot · Java 21 · Full-Stack",
+    subtitle: "Spring Boot · Java 21 · MySQL · WebSocket",
     description: "Developed a full-stack classified marketplace where users can post and manage ads, manage profiles, make payments, and chat with sellers in real time. Implemented role-based access for Admin, Moderator, and User, including ad approvals, payment reviews, report management, and ratings. Built secure authentication, image uploads, and responsive UI with support for Google login and JWT-based access.",
     tech: ["Spring Boot", "Java 21", "MySQL", "Bootstrap", "jQuery", "AJAX", "JSON", "Firebase", "JWT", "WebSocket", "Swagger UI", "Draw.io"],
     features: [
@@ -126,7 +126,7 @@ export const PROJECTS: Project[] = [
       "Real-time chat powered by WebSocket and secure background JWT authentication."
     ],
     live: "https://youtu.be/GXPGD9f9S60?si=nnxOtfe3oj2NceIX",
-    github: "https://github.com/ruwani425",
+    github: "https://github.com/ruwani425/adlync-springboot-fullstack",
   },
   {
     title: "GoPlan – AI-Powered Travel Planning Mobile App",
@@ -139,7 +139,7 @@ export const PROJECTS: Project[] = [
       "Custom Python data processing pipelines for travel and location datasets.",
       "Rich mobile UI built with React Native and Expo."
     ],
-    github: "https://github.com/ruwani425",
+    github: "https://github.com/GDSE72/Go-Plan-Mobile-App",
   },
   {
     title: "Theta Lounge – Floating Therapy Platform",
@@ -166,8 +166,8 @@ export const PROJECTS: Project[] = [
       "Hospital and Campaign management modules with dynamic JasperSoft reporting."
     ],
     githubLinks: [
-      { label: "MVC Repo", url: "https://github.com/ruwani425/Blood-Bank-Management-System.git" },
-      { label: "Layered Repo", url: "https://github.com/ruwani425/Blood-Bank-layerd-architecture.git" }
+      { label: "MVC Repo", url: "https://github.com/ruwani425/Blood-Bank-Management-System" },
+      { label: "Layered Repo", url: "https://github.com/ruwani425/Blood-Bank-layerd-architecture" }
     ],
   },
   {
