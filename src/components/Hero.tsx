@@ -109,7 +109,7 @@ export default function Hero() {
             {/* Circular Image Frame */}
             <div className="relative w-[280px] h-[280px] xxs:w-[310px] xxs:h-[310px] sm:w-[360px] sm:h-[360px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden border-2 border-primary/50 shadow-2xl z-10">
               <Image
-                src="/ruwani.png"
+                src="/ruwani-hero.jpg"
                 alt="Ruwani Ranthika"
                 fill
                 className="object-cover object-top"
