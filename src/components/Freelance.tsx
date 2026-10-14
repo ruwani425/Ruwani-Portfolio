@@ -77,8 +77,8 @@ export default function Freelance() {
             </div>
           </MotionWrapper>
 
-          {/* 3 Separate Experience Boxes Ordered in a Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Experience Project Cards (2x2 Grid) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {CODE3X_PROJECTS.map((proj, idx) => (
               <MotionWrapper key={idx} delay={0.2 + idx * 0.1} className="h-full">
                 <div className="glass-card rounded-2xl p-6 hover:bg-card/80 transition-all duration-300 hover:scale-[1.01] h-full flex flex-col justify-between">

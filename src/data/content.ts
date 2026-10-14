@@ -65,6 +65,17 @@ export const CODE3X_PROJECTS: Code3xProject[] = [
     tech: ["Node.js", "TypeScript", "Prisma ORM", "MySQL", "Spring Boot", "Java", "ERD"]
   },
   {
+    title: "Master Mind Physics Dashboard",
+    subtitle: "Mathematical Examination & Formula Engine",
+    impactBadge: "KaTeX Equation Engine · LaTeX Converter · Bilingual Support",
+    points: [
+      "Integrated a KaTeX mathematical equation engine with real-time live preview and automated PDF clipboard-to-LaTeX converter.",
+      "Engineered Bamini-to-Unicode transcoding utility and custom Tamil input fields for bilingual physics examination workflows.",
+      "Developed bidirectional math formatter (LaTeX/plain math), reusable diagram uploader, and dynamic MCQ answer mode workflows."
+    ],
+    tech: ["React", "TypeScript", "KaTeX", "LaTeX", "Bamini Unicode", "Material UI"]
+  },
+  {
     title: "MOOC Platform",
     subtitle: "Multilingual Online Learning Platform",
     impactBadge: "Reusable UI System · Sinhala/English Localization · PWA",
