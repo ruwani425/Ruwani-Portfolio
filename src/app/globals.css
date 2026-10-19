@@ -148,4 +148,17 @@
   .text-gradient-primary {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#e1306c] to-accent;
   }
+
+  /* Height-aware responsive styling: expands on tall desktop screens, stays fitted on laptops */
+  @media (min-height: 800px) and (min-width: 1024px) {
+    .hero-desktop-heading {
+      font-size: clamp(3.25rem, 4.5vw, 4.5rem) !important;
+      line-height: 1.12 !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .hero-desktop-avatar {
+      width: clamp(380px, 28vw, 430px) !important;
+      height: clamp(380px, 28vw, 430px) !important;
+    }
+  }
 }
