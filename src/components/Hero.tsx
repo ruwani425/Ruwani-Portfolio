@@ -5,6 +5,7 @@ import { ArrowRight, Download } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import ParticleNetwork from "./ParticleNetwork";
 
 const titles = [
   "Software Engineer",
@@ -14,6 +15,8 @@ const titles = [
   "Freelancer",
   "AI-Assisted Developer",
 ];
+
+const THEME_COLORS = ["#833AB4", "#E1306C", "#FD1D1D", "#FCAF45"];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -26,10 +29,29 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-16 pb-8 px-4 sm:px-6 md:px-8 relative overflow-hidden w-full">
-      {/* Dynamic Ambient Theme Glows */}
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[480px] md:h-[480px] bg-primary/15 rounded-full blur-[100px] -z-10 pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[220px] h-[220px] md:w-[380px] md:h-[380px] bg-accent/10 rounded-full blur-[90px] -z-10 pointer-events-none" />
+    <section className="min-h-screen flex items-center pt-16 pb-8 px-4 sm:px-6 md:px-8 relative overflow-hidden w-full isolate">
+      {/* Permanent, cohesive network that stays unified and never resets */}
+      <ParticleNetwork
+        colors={THEME_COLORS}
+        lineColor="#E1306C"
+        maxDistance={290}
+      />
+
+      {/* Ambient Theme Glows (Purple & Warm Coral matching your portfolio palette) */}
+      <div
+        className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[550px] md:h-[550px] rounded-full blur-[110px] pointer-events-none z-0 opacity-25 dark:opacity-20"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(131, 58, 180, 0.3) 0%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute top-1/3 right-1/4 w-[280px] h-[280px] md:w-[450px] md:h-[450px] rounded-full blur-[100px] pointer-events-none z-0 opacity-20 dark:opacity-15"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(225, 48, 108, 0.25) 0%, transparent 70%)",
+        }}
+      />
 
       <div className="max-w-5xl lg:max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-center gap-8 lg:gap-12 relative z-10">
         {/* Left Col: Text Content */}
